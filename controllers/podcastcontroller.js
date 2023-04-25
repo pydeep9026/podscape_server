@@ -34,7 +34,7 @@ module.exports.createpodcast = async (req, res, next) => {
 
   module.exports.getallpodcasts = async (req, res, next) => {
     try {
-      const podcasts = await Podcast.find() 
+      const podcasts = await Podcast.find().populate('creator');
       return res.json(podcasts); 
     } catch (err) {
       next(err);
