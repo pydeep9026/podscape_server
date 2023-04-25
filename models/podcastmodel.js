@@ -22,7 +22,7 @@ const podcastSchema = new mongoose.Schema({
   }, 
   creator: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Creator',
+    ref: 'Speaker',
     required: true
   },
   episode1:{
